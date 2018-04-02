@@ -17,8 +17,22 @@ When you've created your graph post the code and images it outputs for the three
              - - - - - - - - - - - - - - - - - - 
           - - - Runner up prizes and rewards - - - 
              - - - - - - - - - - - - - - - - - - 
+                 
 
 Competition Example Logs 
+
+There are three logs each covering a different time-range, these are logs recorded from a DHT22 sensor and contain first the Temperature data then the Air Humidity Percentage and finally the datetime string, the three readings are sepearated by a single '>' character.  Though you don't need to worry about this, inside temp_graph.py is a function that'll read the logs and pass you two lists, one with the Temp data and the other with the Datetime data - these are both the same length and in the same order.
+
+To see example graphs made with the logs you can use the following command line arguments;
+
+   ./temp_graph.py log=dht22_comp1.txt out=comp1_example.png example
+   ./temp_graph.py log=dht22_comp2.txt
+   ./temp_graph.py log=dht22_comp3.txt temp_unit_f colour_graph=false example
+
+for more information on the temp_graph script use
+
+    ./temp_graph --help 
+
 
    Name              log entries                 dates                notes    
                                                   
